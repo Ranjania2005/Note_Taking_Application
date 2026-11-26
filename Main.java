@@ -97,19 +97,23 @@ public class Main{
     }
     //View note
     public static void view(int id){
-        for(Note n:notes){
-            if(n.getid()==id){
+        if(notes.isEmpty()){
+            System.out.println("No notes are currently available to view.");
+            return;
+        }
+        for(Note n : notes){
+            if(n.getid() == id){
                 printNote(n);
                 return;
             }
         }
-        System.out.println("NoteID : "+id+" not found.");
+        System.out.println("NoteID : " + id + " not found.");
     }
 
     private static void printNote(Note n){
-        System.out.println("ID : "+n.getid());
-        System.out.println("Title : "+n.gettitle());
-        System.out.println("Text : "+n.gettext());
+        System.out.println("ID : " + n.getid());
+        System.out.println("Title : " + n.gettitle());
+        System.out.println("Text : " + n.gettext());
     }
     //Update note
     public static void update(){

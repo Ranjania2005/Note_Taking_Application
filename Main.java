@@ -66,7 +66,7 @@ public class Main{
                     System.out.println("Goodbye!");
                     return;
                 default:
-                    System.out.println("Please choose a number from 1 to 5.");
+                    System.out.println("Please choose a number from One to Six.");
             }
         }
     }

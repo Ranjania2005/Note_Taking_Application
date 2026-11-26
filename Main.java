@@ -109,7 +109,6 @@ public class Main{
         }
         System.out.println("NoteID : " + id + " not found.");
     }
-
     private static void printNote(Note n){
         System.out.println("ID : " + n.getid());
         System.out.println("Title : " + n.gettitle());
@@ -146,20 +145,16 @@ public class Main{
             System.out.println("No notes are currently available to delete.");
             return;
         }
-        else{
-            System.out.println("NoteId to delete : ");
-            int id=sc.nextInt();
-            sc.nextLine();
-            for(Note n:notes){
-                if(n.getid()==id){
-                    notes.remove(n);
-                    System.out.println("NoteID : "+id+" Deleted Successfully.");
-                    return;
-                }
-                else{
-                    System.out.println("Not found");
-                }
+        System.out.print("NoteId to delete: ");
+        int id=sc.nextInt();
+        sc.nextLine();
+        for(Note n : notes){
+            if(n.getid()==id){
+                notes.remove(n);
+                System.out.println("NoteID : " + id + " Deleted Successfully.");
+                return;
             }
         }
+        System.out.println("NoteID : " + id + " not found.");
     }
 }
